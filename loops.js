@@ -52,7 +52,7 @@ console.log(map);
 const filter = chaos.filter(function(f){
     return f.id > 2;
 }).map((b) => {
-    return b.task;
+    return b.task; 
 })
 
 console.log(filter);
