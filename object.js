@@ -31,11 +31,16 @@ const chaos = [{
 },
 {id: 3,
     task: "make Coffee",
-    isFinished: false,
+    isFinished: true,
 },
 {id: 4,
     task: "Practice coding",
     isFinished: false,
 }];
 
-console.log(chaos[3].task)
+console.log(chaos[3].task);
+
+// JSON from Object
+
+const chaosJson = JSON.stringify(chaos);
+console.log(chaosJson);
