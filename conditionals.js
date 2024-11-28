@@ -22,3 +22,24 @@ const uDrive = carName === "Kia" ? "You drive cheap car" :
 
 console.log(uDrive);
 
+// Switch Statement
+
+const grade = 71;
+switch (true){
+    case (grade>=80): console.log("A");
+    break;
+    
+    case grade>=70 : console.log("B");
+    break;
+    
+    case grade>=60 : console.log("C");
+    break;
+    
+    case (grade>=50) : console.log("D");
+    break;
+    
+    case (grade>=40) : console.log("E");
+    break;
+    default:
+        console.log("Yah neh you should study.");
+}
