@@ -11,3 +11,14 @@ if (x === 0){
 else{
     console.log("Your Wrong!");
 }
+
+// ternary operator
+
+let carName = "BMW";
+
+const uDrive = carName === "Kia" ? "You drive cheap car" :
+               carName === "Polo" ? "You drive playboy car" :
+                "Now you drive real car!";
+
+console.log(uDrive);
+
