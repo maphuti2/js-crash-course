@@ -47,3 +47,31 @@ class Full_Names{
 }
 
 console.log(Full_Names.getFullName('thapelo', 'rebombo'));
+
+// Getters and Setters
+
+class Circle{
+    constructor(radius){
+        this._radius = radius;
+    }
+
+    get radius(){
+        return this._radius;
+    }
+
+    set radius(newRadius){
+        if (newRadius > 0){
+            this._radius = newRadius;
+        }else{
+            console.log('Radius must be positive.');
+        }
+    }
+
+    get area(){
+        return Math.PI * this._radius * this._radius;
+    }
+}
+
+const circle = new Circle(5);
+circle.radius = -8;
+console.log(circle.radius);
