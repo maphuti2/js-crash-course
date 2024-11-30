@@ -55,17 +55,18 @@ class Circle{
         this._radius = radius;
     }
 
-    get radius(){
+    get radius(){       // Retrieve the value of a property
         return this._radius;
     }
 
-    set radius(newRadius){
+    set radius(newRadius){      // set the value of a property and can include validation logic
         if (newRadius > 0){
             this._radius = newRadius;
         }else{
             console.log('Radius must be positive.');
         }
     }
+
 
     get area(){
         return Math.PI * this._radius * this._radius;
@@ -75,3 +76,23 @@ class Circle{
 const circle = new Circle(5);
 circle.radius = -8;
 console.log(circle.radius);
+
+
+// private field in class
+
+class Account {
+    #balance;       // private field
+
+    constructor(accName, accType){
+        this.accName = accName;
+        this.accType = accType;
+        this.#balance = 502.67;
+    }
+
+    getBalance(){
+        return this.#balance;
+    }
+}
+
+const accHolder = new Account('Maphuti', 'Savings');
+console.log(`Available balance: R${accHolder.getBalance()}`);
