@@ -36,4 +36,14 @@ class Job extends Person {
 const employee1 = new Job('Thapelo', 'Mamo', 26, 'Software Developer');
 
 employee1.employeeDetail();
+console.log(employee1.jobTitle);
 
+// Static Methods are self called classes
+
+class Full_Names{
+    static getFullName(firstName, lastName){
+        return `${lastName} ${firstName}`;
+    }
+}
+
+console.log(Full_Names.getFullName('thapelo', 'rebombo'));
