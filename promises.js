@@ -31,6 +31,6 @@ function createPost(post){
     });
 }
 
-// printing data from createpost / promise function
+// printing data from Promise function
 
 createPost({title: 'Post Three', body: 'This is post three'}).then(getPost).catch(err => console.error(err));
