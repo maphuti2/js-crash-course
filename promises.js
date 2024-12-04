@@ -14,4 +14,23 @@ function getPost(){
     }, 2000);
 }
 
-getPost();
+// promise function
+
+function createPost(post){
+    return new Promise((resolve, reject) => {
+        setTimeout(() =>{
+            posts.push(post);
+            const err = true;
+
+            if (!err){
+                resolve();
+            }else{
+                reject('Error, Something went wrong');
+            }
+        }, 3000)
+    });
+}
+
+// printing data from createpost / promise function
+
+createPost({title: 'Post Three', body: 'This is post three'}).then(getPost).catch(err => console.error(err));
