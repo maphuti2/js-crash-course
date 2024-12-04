@@ -36,6 +36,9 @@ function createPost(post){
     })
     
 }
+
+// Async / Await function
+
 async function init() {
     await createPost({title: 'post 3', body: 'This 3'});
 
@@ -43,3 +46,17 @@ async function init() {
 }
 
 init();
+
+
+// async / await & fetch
+
+async function fetchUser(){
+    const user = await fetch('https://jsonplaceholder.typicode.com/users');
+    const userData = await user.json();
+
+    userData.forEach((u) =>{
+        console.log(`${u.name} email:${u.email}`);
+    });
+}
+
+fetchUser();
