@@ -20,7 +20,7 @@ function createPosts(post, callback){
     setTimeout(() => {
         posts.push(post);
         callback();
-    },3000)
+    },3000);
 }
 
 createPosts({title: 'Post Three', body: 'This is post three.'}, getPosts);
