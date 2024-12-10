@@ -84,3 +84,21 @@ const currentDate = () => {
     return `${day}-${month}-${year}`;
 }
 currentDate();
+
+/*
+    Challenge 5
+    -----------
+
+    Write a Javascript program to create a new string adding "New!" in front of a given string. If the given string begins with "New!" already then return the original string.
+
+*/
+
+const addWord = (word) =>{
+    if (word.startsWith('New!')){
+        return word;
+    }else{
+        return `New! ${word}`;
+    }
+}
+
+addWord('New! people are coming.');
