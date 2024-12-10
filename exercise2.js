@@ -35,3 +35,54 @@ const halfString = (str) => {
 }
 
 halfString("hope");
+
+/*
+
+Challenge 3
+-----------
+
+Write a JavaScript program to concatenate two strings except their first character.
+
+*/
+
+const group = (str1, str2) => {return `${str1.slice(1)}${str2.slice(1)}`;}
+
+group('fede', 'howzit');
+
+/*
+
+    Challenge 4
+    ------------
+
+    Given two values, Write a JavaScript program to find out which one is nearest to 100.
+*/
+
+const near100 = (v1,v2) => {
+    if (v1 > v2){
+        return `${v1} is nearest to 100.`;
+    }
+    else{
+        return `${v2} is nearest to 100.`;
+    }
+}
+
+near100(56,80);
+
+
+/*
+
+    Challenge 5
+    ------------
+
+    Write a JavaScript to check a given string contains 2 to 4 occurrences of a specified character.
+*/
+
+const countChar = (str, char) => {
+    return str.split('').filter(ch => ch === char).length;
+}
+
+const contain = (str, char) => {
+    return countChar(str, char) >= 2 && countChar(str, char) <= 4;
+}
+
+contain('hmmmm!', 'm');
